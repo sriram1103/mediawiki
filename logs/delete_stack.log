@@ -1,0 +1,214 @@
+# tf destroy -auto-approve
+tls_private_key.this: Refreshing state... [id=007a7968b0aad969a28e83f337f93859ebc3e5ff]
+module.rds.module.db_option_group.aws_db_option_group.this[0]: Refreshing state... [id=wikidatabase-20201003103421181700000001]
+module.key-pair.aws_key_pair.this[0]: Refreshing state... [id=mediawiki]
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0eaece40f5a94d2b5]
+aws_efs_file_system.efs: Refreshing state... [id=fs-d24d2c03]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0755edad097d2b89d]
+module.vpc.aws_eip.nat[1]: Refreshing state... [id=eipalloc-02b1c2ae57cbd1c17]
+aws_ssm_parameter.dbName: Refreshing state... [id=/mediawiki/db/name]
+module.rds.module.db_instance.data.aws_iam_policy_document.enhanced_monitoring: Refreshing state... [id=1813475199]
+aws_iam_role.ec2_role: Refreshing state... [id=ec2-wiki-role]
+aws_ssm_parameter.stack_name: Refreshing state... [id=/mediawiki/cf/stack_name]
+module.rds.module.db_parameter_group.aws_db_parameter_group.this[0]: Refreshing state... [id=wikidatabase-20201003103422878300000002]
+aws_ssm_parameter.dbUser: Refreshing state... [id=/mediawiki/db/user]
+aws_secretsmanager_secret.dbPass: Refreshing state... [id=arn:aws:secretsmanager:ap-south-1::secret:dbpasswor-fvhhc8]
+aws_ssm_parameter.key_name: Refreshing state... [id=/mediawiki/ec2/key_name]
+aws_ssm_parameter.nfs_id: Refreshing state... [id=/mediawiki/ec2/nfs]
+aws_secretsmanager_secret_version.dbPass: Refreshing state... [id=arn:aws:secretsmanager:ap-south-1::secret:dbpasswor-fvhhc8|FE75241E-6AF2-4DB6-9BC4-17D32097534F]
+aws_iam_instance_profile.ec2_profile: Refreshing state... [id=ec2_profile]
+aws_iam_role_policy.ec2_role_policy: Refreshing state... [id=ec2-wiki-role:ec2_role_policy]
+aws_ssm_parameter.sg_name: Refreshing state... [id=/mediawiki/ec2/sg_name]
+aws_security_group_rule.ssh: Refreshing state... [id=sgrule-1660938846]
+aws_security_group_rule.rds: Refreshing state... [id=sgrule-684394773]
+aws_security_group_rule.nfs: Refreshing state... [id=sgrule-3138230687]
+aws_lb_target_group.alb-tg: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-south-1::targetgroup/mediawiki-app-tg/6b85be0b5e2f1854]
+aws_security_group_rule.http-80: Refreshing state... [id=sgrule-3564484587]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0bd5eec49f7821636]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0fa1046095229f451]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0a56b04ba38a49cc1]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0b252994055e976cb]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-08a6818d43866dbee]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-00d565fde66b530cd]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0b78a212cb469a379]
+module.vpc.aws_route_table.private[1]: Refreshing state... [id=rtb-05a8501bf26cf8dc1]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-0d17e3f75e2a5bbc5]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-03b4c71c60b1ab988]
+module.vpc.aws_nat_gateway.this[1]: Refreshing state... [id=nat-04f984457e6033c7f]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-030d914bfdb76b49a]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-08a6818d43866dbee1080289494]
+aws_efs_mount_target.efs_mount[1]: Refreshing state... [id=fsmt-f025fd21]
+aws_efs_mount_target.efs_mount[0]: Refreshing state... [id=fsmt-f325fd22]
+aws_lb.wiki-elb: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-south-1::loadbalancer/app/mediawiki-wiki-lb/ae062038c7414302]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-082903d25b34396d7]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-05aee2d231af112af]
+module.rds.module.db_subnet_group.aws_db_subnet_group.this[0]: Refreshing state... [id=wikidatabase-20201003103431462400000003]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0b78a212cb469a3791080289494]
+module.vpc.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-05a8501bf26cf8dc11080289494]
+module.rds.module.db_instance.aws_db_instance.this[0]: Refreshing state... [id=wikidatabase]
+aws_ssm_parameter.lbDNS: Refreshing state... [id=/mediawiki/elb/dns]
+aws_lb_listener.wiki-lsnr: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-south-1::listener/app/mediawiki-wiki-lb/ae062038c7414302/3c2767b66b78073b]
+aws_ssm_parameter.dbHost: Refreshing state... [id=/mediawiki/db/host]
+null_resource.stackAction: Refreshing state... [id=8281062676187174002]
+null_resource.stackAction: Destroying... [id=8281062676187174002]
+null_resource.stackAction: Destruction complete after 0s
+aws_ssm_parameter.dbName: Destroying... [id=/mediawiki/db/name]
+aws_lb_listener.wiki-lsnr: Destroying... [id=arn:aws:elasticloadbalancing:ap-south-1::listener/app/mediawiki-wiki-lb/ae062038c7414302/3c2767b66b78073b]
+aws_security_group_rule.nfs: Destroying... [id=sgrule-3138230687]
+aws_efs_mount_target.efs_mount[0]: Destroying... [id=fsmt-f325fd22]
+module.vpc.aws_route_table_association.private[0]: Destroying... [id=rtbassoc-05aee2d231af112af]
+aws_security_group_rule.rds: Destroying... [id=sgrule-684394773]
+module.vpc.aws_route.private_nat_gateway[1]: Destroying... [id=r-rtb-05a8501bf26cf8dc11080289494]
+aws_security_group_rule.http-80: Destroying... [id=sgrule-3564484587]
+aws_ssm_parameter.stack_name: Destroying... [id=/mediawiki/cf/stack_name]
+aws_ssm_parameter.stack_name: Provisioning with 'local-exec'...
+aws_ssm_parameter.stack_name (local-exec): Executing: ["/bin/bash" "-c" "aws cloudformation delete-stack --stack-name wikistack"]
+aws_secretsmanager_secret_version.dbPass: Destroying... [id=arn:aws:secretsmanager:ap-south-1::secret:dbpasswor-fvhhc8|FE75241E-6AF2-4DB6-9BC4-17D32097534F]
+aws_secretsmanager_secret_version.dbPass: Destruction complete after 0s
+aws_security_group_rule.ssh: Destroying... [id=sgrule-1660938846]
+aws_lb_listener.wiki-lsnr: Destruction complete after 0s
+aws_ssm_parameter.dbName: Destruction complete after 0s
+module.vpc.aws_route_table_association.private[0]: Destruction complete after 0s
+module.vpc.aws_route.private_nat_gateway[1]: Destruction complete after 0s
+aws_iam_role_policy.ec2_role_policy: Destroying... [id=ec2-wiki-role:ec2_role_policy]
+module.vpc.aws_route.private_nat_gateway[0]: Destroying... [id=r-rtb-0b78a212cb469a3791080289494]
+aws_ssm_parameter.key_name: Destroying... [id=/mediawiki/ec2/key_name]
+aws_ssm_parameter.sg_name: Destroying... [id=/mediawiki/ec2/sg_name]
+aws_security_group_rule.nfs: Destruction complete after 0s
+module.vpc.aws_route.private_nat_gateway[0]: Destruction complete after 0s
+module.vpc.aws_route_table_association.public[1]: Destroying... [id=rtbassoc-0d17e3f75e2a5bbc5]
+module.vpc.aws_route.public_internet_gateway[0]: Destroying... [id=r-rtb-08a6818d43866dbee1080289494]
+aws_ssm_parameter.key_name: Destruction complete after 0s
+aws_ssm_parameter.sg_name: Destruction complete after 0s
+aws_ssm_parameter.nfs_id: Destroying... [id=/mediawiki/ec2/nfs]
+aws_iam_instance_profile.ec2_profile: Destroying... [id=ec2_profile]
+module.vpc.aws_route.public_internet_gateway[0]: Destruction complete after 0s
+module.vpc.aws_route_table_association.public[1]: Destruction complete after 1s
+aws_security_group_rule.rds: Destruction complete after 1s
+aws_ssm_parameter.nfs_id: Destruction complete after 1s
+aws_ssm_parameter.lbDNS: Destroying... [id=/mediawiki/elb/dns]
+module.vpc.aws_route_table_association.public[0]: Destroying... [id=rtbassoc-030d914bfdb76b49a]
+aws_ssm_parameter.dbHost: Destroying... [id=/mediawiki/db/host]
+aws_iam_role_policy.ec2_role_policy: Destruction complete after 1s
+aws_ssm_parameter.stack_name: Destruction complete after 1s
+aws_security_group_rule.http-80: Destruction complete after 1s
+aws_ssm_parameter.lbDNS: Destruction complete after 0s
+module.vpc.aws_route_table_association.private[1]: Destroying... [id=rtbassoc-082903d25b34396d7]
+aws_ssm_parameter.dbUser: Destroying... [id=/mediawiki/db/user]
+aws_secretsmanager_secret.dbPass: Destroying... [id=arn:aws:secretsmanager:ap-south-1::secret:dbpasswor-fvhhc8]
+aws_efs_mount_target.efs_mount[1]: Destroying... [id=fsmt-f025fd21]
+aws_ssm_parameter.dbHost: Destruction complete after 0s
+aws_ssm_parameter.dbUser: Destruction complete after 0s
+module.vpc.aws_route_table_association.public[0]: Destruction complete after 0s
+module.vpc.aws_nat_gateway.this[0]: Destroying... [id=nat-03b4c71c60b1ab988]
+aws_lb_target_group.alb-tg: Destroying... [id=arn:aws:elasticloadbalancing:ap-south-1::targetgroup/mediawiki-app-tg/6b85be0b5e2f1854]
+module.vpc.aws_route_table_association.private[1]: Destruction complete after 1s
+module.vpc.aws_nat_gateway.this[1]: Destroying... [id=nat-04f984457e6033c7f]
+module.key-pair.aws_key_pair.this[0]: Destroying... [id=mediawiki]
+aws_secretsmanager_secret.dbPass: Destruction complete after 1s
+aws_lb.wiki-elb: Destroying... [id=arn:aws:elasticloadbalancing:ap-south-1::loadbalancer/app/mediawiki-wiki-lb/ae062038c7414302]
+module.rds.module.db_instance.aws_db_instance.this[0]: Destroying... [id=wikidatabase]
+aws_security_group_rule.ssh: Destruction complete after 2s
+aws_lb_target_group.alb-tg: Destruction complete after 1s
+module.vpc.aws_route_table.public[0]: Destroying... [id=rtb-08a6818d43866dbee]
+module.vpc.aws_route_table.private[1]: Destroying... [id=rtb-05a8501bf26cf8dc1]
+module.key-pair.aws_key_pair.this[0]: Destruction complete after 0s
+module.vpc.aws_route_table.private[0]: Destroying... [id=rtb-0b78a212cb469a379]
+module.vpc.aws_route_table.public[0]: Destruction complete after 0s
+module.vpc.aws_route_table.private[1]: Destruction complete after 0s
+aws_iam_instance_profile.ec2_profile: Destruction complete after 2s
+tls_private_key.this: Destroying... [id=007a7968b0aad969a28e83f337f93859ebc3e5ff]
+tls_private_key.this: Destruction complete after 0s
+module.vpc.aws_route_table.private[0]: Destruction complete after 0s
+aws_iam_role.ec2_role: Destroying... [id=ec2-wiki-role]
+aws_lb.wiki-elb: Destruction complete after 1s
+aws_iam_role.ec2_role: Destruction complete after 2s
+aws_efs_mount_target.efs_mount[0]: Still destroying... [id=fsmt-f325fd22, 10s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still destroying... [id=fsmt-f025fd21, 10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-03b4c71c60b1ab988, 10s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still destroying... [id=nat-04f984457e6033c7f, 10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 10s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still destroying... [id=fsmt-f325fd22, 20s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still destroying... [id=fsmt-f025fd21, 20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-03b4c71c60b1ab988, 20s elapsed]
+aws_efs_mount_target.efs_mount[0]: Destruction complete after 21s
+module.vpc.aws_nat_gateway.this[1]: Still destroying... [id=nat-04f984457e6033c7f, 20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 20s elapsed]
+aws_efs_mount_target.efs_mount[1]: Destruction complete after 22s
+aws_efs_file_system.efs: Destroying... [id=fs-d24d2c03]
+aws_efs_file_system.efs: Destruction complete after 3s
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-03b4c71c60b1ab988, 30s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still destroying... [id=nat-04f984457e6033c7f, 30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-03b4c71c60b1ab988, 40s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still destroying... [id=nat-04f984457e6033c7f, 40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 40s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Destruction complete after 41s
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-03b4c71c60b1ab988, 50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 50s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Destruction complete after 52s
+module.vpc.aws_subnet.public[1]: Destroying... [id=subnet-0b252994055e976cb]
+module.vpc.aws_eip.nat[1]: Destroying... [id=eipalloc-02b1c2ae57cbd1c17]
+module.vpc.aws_subnet.public[0]: Destroying... [id=subnet-0a56b04ba38a49cc1]
+module.vpc.aws_eip.nat[0]: Destroying... [id=eipalloc-0755edad097d2b89d]
+module.vpc.aws_internet_gateway.this[0]: Destroying... [id=igw-00d565fde66b530cd]
+module.vpc.aws_eip.nat[0]: Destruction complete after 0s
+module.vpc.aws_subnet.public[1]: Destruction complete after 0s
+module.vpc.aws_eip.nat[1]: Destruction complete after 0s
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 1m0s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 10s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 1m10s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 20s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 1m20s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 30s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 1m30s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 40s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 1m40s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 50s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 1m50s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 1m0s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 1m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 2m0s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 1m10s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 1m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 2m10s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 1m20s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 1m20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 2m20s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 1m30s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 1m30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 2m30s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 1m40s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 1m40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 2m40s elapsed]
+module.vpc.aws_subnet.public[0]: Still destroying... [id=subnet-0a56b04ba38a49cc1, 1m50s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Still destroying... [id=igw-00d565fde66b530cd, 1m50s elapsed]
+module.vpc.aws_internet_gateway.this[0]: Destruction complete after 1m50s
+module.vpc.aws_subnet.public[0]: Destruction complete after 1m50s
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 2m50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 3m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 3m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 3m20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 3m30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 3m40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still destroying... [id=wikidatabase, 3m50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Destruction complete after 3m56s
+module.rds.module.db_parameter_group.aws_db_parameter_group.this[0]: Destroying... [id=wikidatabase-20201003103422878300000002]
+module.rds.module.db_subnet_group.aws_db_subnet_group.this[0]: Destroying... [id=wikidatabase-20201003103431462400000003]
+module.rds.module.db_option_group.aws_db_option_group.this[0]: Destroying... [id=wikidatabase-20201003103421181700000001]
+module.rds.module.db_option_group.aws_db_option_group.this[0]: Destruction complete after 0s
+module.rds.module.db_subnet_group.aws_db_subnet_group.this[0]: Destruction complete after 0s
+module.rds.module.db_parameter_group.aws_db_parameter_group.this[0]: Destruction complete after 0s
+module.vpc.aws_subnet.private[0]: Destroying... [id=subnet-0bd5eec49f7821636]
+module.vpc.aws_subnet.private[1]: Destroying... [id=subnet-0fa1046095229f451]
+module.vpc.aws_subnet.private[1]: Destruction complete after 1s
+module.vpc.aws_subnet.private[0]: Destruction complete after 1s
+module.vpc.aws_vpc.this[0]: Destroying... [id=vpc-0eaece40f5a94d2b5]
+module.vpc.aws_vpc.this[0]: Destruction complete after 1s
+
+Destroy complete! Resources: 50 destroyed.

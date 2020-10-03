@@ -1,0 +1,217 @@
+# tf apply -auto-approve 
+module.rds.module.db_instance.data.aws_iam_policy_document.enhanced_monitoring: Refreshing state...
+tls_private_key.this: Creating...
+tls_private_key.this: Creation complete after 0s [id=007a7968b0aad969a28e83f337f93859ebc3e5ff]
+aws_ssm_parameter.dbUser: Creating...
+module.vpc.aws_eip.nat[0]: Creating...
+module.vpc.aws_eip.nat[1]: Creating...
+aws_secretsmanager_secret.dbPass: Creating...
+aws_ssm_parameter.stack_name: Creating...
+module.key-pair.aws_key_pair.this[0]: Creating...
+aws_efs_file_system.efs: Creating...
+aws_ssm_parameter.dbName: Creating...
+module.rds.module.db_option_group.aws_db_option_group.this[0]: Creating...
+module.vpc.aws_vpc.this[0]: Creating...
+module.key-pair.aws_key_pair.this[0]: Creation complete after 1s [id=mediawiki]
+aws_iam_role.ec2_role: Creating...
+aws_secretsmanager_secret.dbPass: Creation complete after 2s [id=arn:aws:secretsmanager:ap-south-1::secret:dbpasswor-fvhhc8]
+module.vpc.aws_eip.nat[1]: Creation complete after 2s [id=eipalloc-02b1c2ae57cbd1c17]
+module.vpc.aws_eip.nat[0]: Creation complete after 2s [id=eipalloc-0755edad097d2b89d]
+module.rds.module.db_parameter_group.aws_db_parameter_group.this[0]: Creating...
+aws_ssm_parameter.key_name: Creating...
+aws_secretsmanager_secret_version.dbPass: Creating...
+module.rds.module.db_option_group.aws_db_option_group.this[0]: Creation complete after 2s [id=wikidatabase-20201003103421181700000001]
+aws_ssm_parameter.dbName: Creation complete after 2s [id=/mediawiki/db/name]
+aws_ssm_parameter.stack_name: Creation complete after 2s [id=/mediawiki/cf/stack_name]
+aws_ssm_parameter.dbUser: Creation complete after 2s [id=/mediawiki/db/user]
+aws_secretsmanager_secret_version.dbPass: Creation complete after 1s [id=arn:aws:secretsmanager:ap-south-1::secret:dbpasswor-fvhhc8|FE75241E-6AF2-4DB6-9BC4-17D32097534F]
+aws_ssm_parameter.key_name: Creation complete after 1s [id=/mediawiki/ec2/key_name]
+module.rds.module.db_parameter_group.aws_db_parameter_group.this[0]: Creation complete after 2s [id=wikidatabase-20201003103422878300000002]
+aws_iam_role.ec2_role: Creation complete after 3s [id=ec2-wiki-role]
+aws_iam_instance_profile.ec2_profile: Creating...
+aws_iam_role_policy.ec2_role_policy: Creating...
+module.vpc.aws_vpc.this[0]: Creation complete after 6s [id=vpc-0eaece40f5a94d2b5]
+aws_security_group_rule.rds: Creating...
+aws_security_group_rule.nfs: Creating...
+module.vpc.aws_subnet.private[1]: Creating...
+aws_security_group_rule.ssh: Creating...
+aws_lb_target_group.alb-tg: Creating...
+aws_security_group_rule.http-80: Creating...
+aws_ssm_parameter.sg_name: Creating...
+aws_iam_role_policy.ec2_role_policy: Creation complete after 3s [id=ec2-wiki-role:ec2_role_policy]
+module.vpc.aws_subnet.public[1]: Creating...
+aws_security_group_rule.rds: Creation complete after 2s [id=sgrule-684394773]
+module.vpc.aws_internet_gateway.this[0]: Creating...
+module.vpc.aws_subnet.private[1]: Creation complete after 2s [id=subnet-0fa1046095229f451]
+aws_efs_file_system.efs: Creation complete after 8s [id=fs-d24d2c03]
+module.vpc.aws_route_table.public[0]: Creating...
+module.vpc.aws_subnet.public[0]: Creating...
+aws_ssm_parameter.sg_name: Creation complete after 2s [id=/mediawiki/ec2/sg_name]
+module.vpc.aws_subnet.private[0]: Creating...
+aws_lb_target_group.alb-tg: Creation complete after 2s [id=arn:aws:elasticloadbalancing:ap-south-1::targetgroup/mediawiki-app-tg/6b85be0b5e2f1854]
+module.vpc.aws_route_table.private[1]: Creating...
+aws_security_group_rule.nfs: Creation complete after 4s [id=sgrule-3138230687]
+module.vpc.aws_route_table.private[0]: Creating...
+aws_iam_instance_profile.ec2_profile: Creation complete after 6s [id=ec2_profile]
+module.vpc.aws_route_table.public[0]: Creation complete after 2s [id=rtb-08a6818d43866dbee]
+aws_ssm_parameter.nfs_id: Creating...
+module.vpc.aws_subnet.private[0]: Creation complete after 2s [id=subnet-0bd5eec49f7821636]
+module.vpc.aws_subnet.public[1]: Creation complete after 2s [id=subnet-0b252994055e976cb]
+module.rds.module.db_subnet_group.aws_db_subnet_group.this[0]: Creating...
+aws_efs_mount_target.efs_mount[1]: Creating...
+aws_efs_mount_target.efs_mount[0]: Creating...
+module.vpc.aws_route_table.private[1]: Creation complete after 2s [id=rtb-05a8501bf26cf8dc1]
+module.vpc.aws_subnet.public[0]: Creation complete after 3s [id=subnet-0a56b04ba38a49cc1]
+module.vpc.aws_route_table_association.public[1]: Creating...
+module.vpc.aws_route_table_association.public[0]: Creating...
+module.vpc.aws_internet_gateway.this[0]: Creation complete after 3s [id=igw-00d565fde66b530cd]
+aws_lb.wiki-elb: Creating...
+aws_security_group_rule.ssh: Creation complete after 6s [id=sgrule-1660938846]
+module.vpc.aws_route_table.private[0]: Creation complete after 2s [id=rtb-0b78a212cb469a379]
+module.vpc.aws_nat_gateway.this[0]: Creating...
+module.vpc.aws_route.public_internet_gateway[0]: Creating...
+module.vpc.aws_route_table_association.public[1]: Creation complete after 1s [id=rtbassoc-0d17e3f75e2a5bbc5]
+module.vpc.aws_route_table_association.public[0]: Creation complete after 1s [id=rtbassoc-030d914bfdb76b49a]
+module.vpc.aws_nat_gateway.this[1]: Creating...
+module.vpc.aws_route_table_association.private[1]: Creating...
+aws_ssm_parameter.nfs_id: Creation complete after 2s [id=/mediawiki/ec2/nfs]
+module.vpc.aws_route_table_association.private[0]: Creating...
+module.rds.module.db_subnet_group.aws_db_subnet_group.this[0]: Creation complete after 2s [id=wikidatabase-20201003103431462400000003]
+module.rds.module.db_instance.aws_db_instance.this[0]: Creating...
+module.vpc.aws_route_table_association.private[1]: Creation complete after 0s [id=rtbassoc-082903d25b34396d7]
+module.vpc.aws_route_table_association.private[0]: Creation complete after 1s [id=rtbassoc-05aee2d231af112af]
+aws_security_group_rule.http-80: Creation complete after 7s [id=sgrule-3564484587]
+module.vpc.aws_route.public_internet_gateway[0]: Creation complete after 1s [id=r-rtb-08a6818d43866dbee1080289494]
+aws_efs_mount_target.efs_mount[1]: Still creating... [10s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [10s elapsed]
+aws_lb.wiki-elb: Still creating... [10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [10s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [10s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still creating... [20s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [21s elapsed]
+aws_lb.wiki-elb: Still creating... [20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [20s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [20s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still creating... [30s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [31s elapsed]
+aws_lb.wiki-elb: Still creating... [30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [30s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [30s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still creating... [40s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [41s elapsed]
+aws_lb.wiki-elb: Still creating... [40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [40s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [40s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still creating... [50s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [51s elapsed]
+aws_lb.wiki-elb: Still creating... [50s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [50s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [50s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still creating... [1m0s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [1m1s elapsed]
+aws_lb.wiki-elb: Still creating... [1m0s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [1m0s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [1m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [1m0s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still creating... [1m10s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [1m11s elapsed]
+aws_lb.wiki-elb: Still creating... [1m10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [1m10s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [1m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [1m10s elapsed]
+aws_efs_mount_target.efs_mount[1]: Still creating... [1m20s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [1m21s elapsed]
+aws_lb.wiki-elb: Still creating... [1m20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [1m20s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [1m20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [1m20s elapsed]
+aws_efs_mount_target.efs_mount[1]: Creation complete after 1m28s [id=fsmt-f025fd21]
+aws_efs_mount_target.efs_mount[0]: Still creating... [1m31s elapsed]
+aws_lb.wiki-elb: Still creating... [1m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [1m30s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [1m30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [1m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Creation complete after 1m30s [id=nat-03b4c71c60b1ab988]
+aws_efs_mount_target.efs_mount[0]: Still creating... [1m41s elapsed]
+aws_lb.wiki-elb: Still creating... [1m40s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [1m40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [1m40s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [1m51s elapsed]
+aws_lb.wiki-elb: Still creating... [1m50s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Still creating... [1m50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [1m50s elapsed]
+module.vpc.aws_nat_gateway.this[1]: Creation complete after 1m51s [id=nat-04f984457e6033c7f]
+module.vpc.aws_route.private_nat_gateway[0]: Creating...
+module.vpc.aws_route.private_nat_gateway[1]: Creating...
+module.vpc.aws_route.private_nat_gateway[0]: Creation complete after 1s [id=r-rtb-0b78a212cb469a3791080289494]
+module.vpc.aws_route.private_nat_gateway[1]: Creation complete after 1s [id=r-rtb-05a8501bf26cf8dc11080289494]
+aws_efs_mount_target.efs_mount[0]: Still creating... [2m1s elapsed]
+aws_lb.wiki-elb: Still creating... [2m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [2m0s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [2m11s elapsed]
+aws_lb.wiki-elb: Still creating... [2m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [2m10s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [2m21s elapsed]
+aws_lb.wiki-elb: Still creating... [2m20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [2m20s elapsed]
+aws_efs_mount_target.efs_mount[0]: Still creating... [2m31s elapsed]
+aws_lb.wiki-elb: Still creating... [2m30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [2m30s elapsed]
+aws_lb.wiki-elb: Creation complete after 2m39s [id=arn:aws:elasticloadbalancing:ap-south-1::loadbalancer/app/mediawiki-wiki-lb/ae062038c7414302]
+aws_ssm_parameter.lbDNS: Creating...
+aws_lb_listener.wiki-lsnr: Creating...
+aws_lb_listener.wiki-lsnr: Creation complete after 0s [id=arn:aws:elasticloadbalancing:ap-south-1::listener/app/mediawiki-wiki-lb/ae062038c7414302/3c2767b66b78073b]
+aws_efs_mount_target.efs_mount[0]: Creation complete after 2m40s [id=fsmt-f325fd22]
+aws_ssm_parameter.lbDNS: Creation complete after 1s [id=/mediawiki/elb/dns]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [2m40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [2m50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [3m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [3m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [3m20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [3m30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [3m40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [3m50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [4m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [4m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [4m20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [4m30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [4m40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [4m50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [5m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [5m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [5m20s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [5m30s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [5m40s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [5m50s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [6m0s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Still creating... [6m10s elapsed]
+module.rds.module.db_instance.aws_db_instance.this[0]: Creation complete after 6m18s [id=wikidatabase]
+aws_ssm_parameter.dbHost: Creating...
+aws_ssm_parameter.dbHost: Creation complete after 1s [id=/mediawiki/db/host]
+null_resource.stackAction: Creating...
+null_resource.stackAction: Provisioning with 'local-exec'...
+null_resource.stackAction (local-exec): Executing: ["/bin/bash" "-c" "../scripts/create_update_stack.sh 1.35 1.35.0 wikistack wikidatabase.cgn4lh6gvpzb.ap-south-1.rds.amazonaws.com"]
+null_resource.stackAction (local-exec): Getting stack params
+null_resource.stackAction (local-exec): Creating Stack
+null_resource.stackAction (local-exec): {
+null_resource.stackAction (local-exec):     "StackId": "arn:aws:cloudformation:ap-south-1::stack/wikistack/d6bd97f0-0564-11eb-af29-0ad9c5eb67ce"
+null_resource.stackAction (local-exec): }
+null_resource.stackAction: Creation complete after 6s [id=8281062676187174002]
+
+Apply complete! Resources: 50 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+instance_role = ec2_profile
+private_key_pem = RSA PRIVATE KEY
+
+private_key_pem_id = mediawiki
+sg_id = sg-021e12dc14d704b95
+stack_name = wikistack
+subnet_id = subnet-0a56b04ba38a49cc1\,subnet-0b252994055e976cb
+target_group_arn = arn:aws:elasticloadbalancing:ap-south-1::targetgroup/mediawiki-app-tg/6b85be0b5e2f1854

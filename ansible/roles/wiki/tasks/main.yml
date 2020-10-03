@@ -1,0 +1,77 @@
+---
+- name: Remove folder if present
+  file: 
+    path: "{{ wikipath }}"
+    state: absent
+
+- name: Download mediawiki
+  get_url:
+    url: https://releases.wikimedia.org/mediawiki/{{ wiki_version }}/{{ item }}
+    dest: /tmp
+  with_items:
+  - mediawiki-{{ wiki_fullversion }}.tar.gz
+  - mediawiki-{{ wiki_fullversion }}.tar.gz.sig
+
+- name: Create folder
+  file:
+    path: "{{ wikipath }}"
+    state: directory
+
+- name: Link folders
+  file:
+    src: "{{ mount_path }}/{{ item }}"
+    dest: "{{ wikipath }}/{{ item }}"
+    state: link
+  with_items:
+  - "images"
+  - "extensions"
+  - "skins"
+
+- name: Check update/install
+  stat:
+    path: "{{ wikipath }}/conf/LocalSettings.php"
+  register: stat_result
+
+- name: Extract tar
+  unarchive:
+    src: /tmp/mediawiki-{{ wiki_fullversion }}.tar.gz
+    dest: "{{ wikipath }}"
+    remote_src: yes  
+    extra_opts: [--strip-components=1]      
+
+- name: install block
+  block:
+  - name: Install wiki
+    command: php maintenance/install.php --dbname {{ dbName }} \
+      --dbuser {{ dbUser }} --dbpass {{ dbPass }} --dbtype mysql  \
+      --dbserver {{ dbHost }} --pass {{ adminPass }}  --server http://{{ wikihost }} \
+      --confpath "{{ wikipath }}" --scriptpath /mediawiki {{ wikiname }} admin
+    args:
+      chdir: "{{ wikipath }}"
+      creates: LocalSettings.php
+
+  - name: Copy Localsettings
+    command: cp {{ wikipath }}/LocalSettings.php {{ mount_path }}/conf/LocalSettings.php
+  when: not stat_result.stat.exists
+
+
+- name: Update block
+  block:
+  - name: Restore Localsettings
+    command: cp {{ mount_path }}/conf/LocalSettings.php {{ wikipath }}/LocalSettings.php 
+
+  - name: Update wiki
+    command: php maintenance/update.php --server http://{{ wikihost }}
+    args:
+      chdir: "{{ wikipath }}"
+  when: stat_result.stat.exists
+
+
+- name: Update perm
+  file:
+    path: /var/www
+    state: directory
+    recurse: yes
+    owner: apache
+    group: apache
+  notify: http-restart

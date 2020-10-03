@@ -1,0 +1,11 @@
+---
+
+- name: Installation Play
+  hosts: all
+  become: true
+  roles:
+  - role: pre-req
+  - role: php
+  - role: http
+  - role: db
+  - role: wiki

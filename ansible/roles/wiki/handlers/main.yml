@@ -1,0 +1,6 @@
+---
+- name: Restart http
+  service: 
+    name=httpd
+    state=restarted
+  listen: "http-restart"

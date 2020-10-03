@@ -1,0 +1,115 @@
+ansible-playbook -i localhost, -c local main.yml -e wiki_version=1.35 -e wiki_fullversion=1.35.0 -e dbHost=wikidatabase.ap-south-1.rds.amazonaws.com -e dbUser=wiki -e dbPass=wiki12345 -e dbName=wikidatabase -e wikihost=mediawiki.ap-south-1.elb.amazonaws.com
+
+PLAY [Installation Play] *******************************************************
+
+TASK [pre-req : Clean Block] ***************************************************
+[WARNING]: Consider using the yum module rather than running 'yum'.  If you
+need to use command because yum is insufficient you can add 'warn: false' to
+this command task or set 'command_warnings=False' in ansible.cfg to get rid of
+this message.
+[WARNING]: Platform linux on host localhost is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/referen
+ce_appendices/interpreter_discovery.html for more information.
+changed: [localhost]
+
+TASK [pre-req : Install dep] ***************************************************
+changed: [localhost]
+
+TASK [php : Install Php] *******************************************************
+changed: [localhost]
+
+TASK [php : Install Php modules] ***********************************************
+changed: [localhost]
+
+TASK [Install httpd] ***********************************************************
+changed: [localhost]
+
+TASK [Update http conf] ********************************************************
+[WARNING]: File '/etc/httpd/conf.d/mediawiki.conf' created with default
+permissions '600'. The previous default was '666'. Specify 'mode' to avoid this
+warning.
+changed: [localhost]
+
+TASK [Install mariadb-server] **************************************************
+skipping: [localhost]
+
+TASK [db : Restart DB] *********************************************************
+skipping: [localhost]
+
+TASK [db : Install pymysql] ****************************************************
+skipping: [localhost]
+
+TASK [db : setup] **************************************************************
+skipping: [localhost]
+
+TASK [db : Delete anonymous users] *********************************************
+skipping: [localhost]
+
+TASK [db : Delete anonymous user - localhost] **********************************
+skipping: [localhost]
+
+TASK [db : remove the test database] *******************************************
+skipping: [localhost]
+
+TASK [db : Set root assword] ***************************************************
+skipping: [localhost]
+
+TASK [wiki db create] **********************************************************
+skipping: [localhost]
+
+TASK [db : Create wiki user] ***************************************************
+skipping: [localhost]
+
+TASK [wiki : Remove folder if present] *****************************************
+ok: [localhost]
+
+TASK [Download mediawiki] ******************************************************
+changed: [localhost] => (item=mediawiki-1.35.0.tar.gz)
+changed: [localhost] => (item=mediawiki-1.35.0.tar.gz.sig)
+[WARNING]: File '/tmp/mediawiki-1.35.0.tar.gz' created with default permissions
+'600'. The previous default was '666'. Specify 'mode' to avoid this warning.
+[WARNING]: File '/tmp/mediawiki-1.35.0.tar.gz.sig' created with default
+permissions '600'. The previous default was '666'. Specify 'mode' to avoid this
+warning.
+
+TASK [wiki : Create folder] ****************************************************
+changed: [localhost]
+
+TASK [wiki : Link folders] *****************************************************
+changed: [localhost] => (item=images)
+changed: [localhost] => (item=extensions)
+changed: [localhost] => (item=skins)
+
+TASK [wiki : Check update/install] *********************************************
+ok: [localhost]
+
+TASK [wiki : Extract tar] ******************************************************
+changed: [localhost]
+
+TASK [Install wiki] ************************************************************
+changed: [localhost]
+
+TASK [wiki : Copy Localsettings] ***********************************************
+changed: [localhost]
+
+TASK [wiki : Restore Localsettings] ********************************************
+skipping: [localhost]
+
+TASK [Update wiki] *************************************************************
+skipping: [localhost]
+
+TASK [wiki : Update perm] ******************************************************
+changed: [localhost]
+
+RUNNING HANDLER [Restart php] **************************************************
+changed: [localhost]
+
+RUNNING HANDLER [Restart http] *************************************************
+changed: [localhost]
+
+RUNNING HANDLER [wiki : Restart http] ******************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=18   changed=16   unreachable=0    failed=0    skipped=12   rescued=0    ignored=0

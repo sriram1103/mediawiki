@@ -1,0 +1,11 @@
+---
+- name: Install Php
+  command: amazon-linux-extras install php7.3 -y
+  args:
+    creates: /bin/php
+
+- name: Install Php modules
+  yum:
+    name: "{{ php_modules }}"
+    state: present
+  notify: php-restart

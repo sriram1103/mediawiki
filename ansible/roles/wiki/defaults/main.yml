@@ -1,0 +1,14 @@
+---
+wikiname: "mywiki"
+dbHost: "localhost"
+dbName: "wikidatabase"
+dbUser: "wiki"
+dbPass: "wiki123"
+wiki_version: "1.35"
+wiki_fullversion: "1.35.0"
+wikipath: "/var/www/mediawiki"
+adminPass: "admin12345"
+installWiki: false
+updateWiki: true
+mount_path: "/efs"
+wikihost: "localhost"

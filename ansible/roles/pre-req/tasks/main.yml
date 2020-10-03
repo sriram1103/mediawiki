@@ -1,0 +1,8 @@
+---
+- name: Clean Block
+  command: yum clean all
+
+- name: Install dep
+  yum:
+    name: python-pip
+    state: present    

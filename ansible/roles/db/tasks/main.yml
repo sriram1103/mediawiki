@@ -1,0 +1,80 @@
+---
+- name: DB install block
+  block:
+  - name: Install mariadb-server
+    yum:
+      name: mariadb-server
+      state: present
+    notify: db-restart
+    register: dbinstall
+
+  - block:
+    - name: Restart DB
+      service: 
+        name=mariadb
+        state=restarted
+          
+    - name: Install pymysql
+      pip:
+        name: pymysql
+        state: present
+
+    - setup:
+        filter: "ansible_hostname"
+
+    - name: Delete anonymous users 
+      mysql_user:
+        user="" 
+        host="{{ ansible_hostname }}" 
+        state="absent"
+        login_user=root
+        login_password=''
+    
+    - name: Delete anonymous user - localhost
+      mysql_user:
+        user="" 
+        state="absent"
+        login_user=root
+        login_password=''        
+    
+    - name: remove the test database
+      mysql_db:
+        db=test 
+        state=absent
+        login_user=root
+        login_password=''        
+
+    - name: Set root assword
+      mysql_user: 
+        login_user=root
+        login_password=''
+        name=root
+        password={{ root_password }}
+        priv=*.*:ALL,GRANT
+        host={{ item }}
+      with_items:
+        - "{{ ansible_hostname }}"
+        - 127.0.0.1
+        - ::1
+        - localhost
+
+    - name: wiki db create
+      mysql_db:
+        name: "{{ dbName }}"
+        state: present
+        login_user: root
+        login_password: "{{ root_password }}"
+
+    - name: Create wiki user
+      mysql_user:
+        name: "{{ dbUser }}"
+        password: "{{ dbPass }}"
+        host: localhost
+        state: present
+        login_user: root
+        login_password: "{{ root_password }}"
+        update_password: on_create
+        priv: "{{ dbName }}.*:ALL"
+    when: dbinstall.changed
+
+  when: install_local_db

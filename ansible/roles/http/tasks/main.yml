@@ -1,0 +1,16 @@
+---
+- name: Install httpd
+  yum:
+    name: httpd
+    state: present
+
+- name: Update index
+  template:
+    src: index.php.j2
+    dest: /var/www/index.php    
+
+- name: Update http conf
+  template:
+    src: mediawiki.conf.j2
+    dest: /etc/httpd/conf.d/mediawiki.conf
+  notify: http-restart

@@ -1,0 +1,74 @@
+# tf apply -auto-approve
+null_resource.stackAction: Refreshing state... [id=4587657500506520319]
+tls_private_key.this: Refreshing state... [id=f5b2d9917efb2f0c3cb9cc2e32d858cc615316b7]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-01a2cfb8d4b5b890c]
+aws_efs_file_system.efs: Refreshing state... [id=fs-101c7dc1]
+module.vpc.aws_eip.nat[1]: Refreshing state... [id=eipalloc-0089d806e326fb5c0]
+aws_ssm_parameter.dbUser: Refreshing state... [id=/mediawiki/db/user]
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0b43ae538c5912eab]
+aws_iam_role.ec2_role: Refreshing state... [id=ec2-wiki-role]
+aws_ssm_parameter.dbName: Refreshing state... [id=/mediawiki/db/name]
+aws_secretsmanager_secret.dbPass: Refreshing state... [id=arn:aws:secretsmanager:ap-south-1::secret:dbPassword-i58oFW]
+module.rds.module.db_parameter_group.aws_db_parameter_group.this[0]: Refreshing state... [id=wikidatabase-20201002170232932200000002]
+module.rds.module.db_option_group.aws_db_option_group.this[0]: Refreshing state... [id=wikidatabase-20201002170232932200000001]
+module.key-pair.aws_key_pair.this[0]: Refreshing state... [id=mediawiki]
+module.rds.module.db_instance.data.aws_iam_policy_document.enhanced_monitoring: Refreshing state... [id=1813475199]
+aws_secretsmanager_secret_version.dbPass: Refreshing state... [id=arn:aws:secretsmanager:ap-south-1::secret:dbPassword-i58oFW|D109F1FB-1766-41C1-8216-4CA82BE43174]
+aws_ssm_parameter.nfs_id: Refreshing state... [id=/mediawiki/ec2/nfs]
+aws_ssm_parameter.key_name: Refreshing state... [id=/mediawiki/ec2/key_name]
+aws_iam_role_policy.ec2_role_policy: Refreshing state... [id=ec2-wiki-role:ec2_role_policy]
+aws_iam_instance_profile.ec2_profile: Refreshing state... [id=ec2_profile]
+aws_security_group_rule.ssh: Refreshing state... [id=sgrule-2557086916]
+aws_security_group_rule.rds: Refreshing state... [id=sgrule-2609715563]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-03ef4a8d701159bed]
+aws_lb_target_group.alb-tg: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-south-1::targetgroup/mediawiki-app-tg/f97e94748f39da07]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0e0ef01e506216924]
+module.vpc.aws_route_table.private[1]: Refreshing state... [id=rtb-03edb24f98e8b3f27]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0322931d9c1532313]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0241ed4c771648ef7]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-08f66a4ab41e0f49f]
+aws_security_group_rule.http-80: Refreshing state... [id=sgrule-786452849]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-092e7339c40d7f0b7]
+aws_ssm_parameter.sg_name: Refreshing state... [id=/mediawiki/ec2/sg_name]
+aws_security_group_rule.nfs: Refreshing state... [id=sgrule-139168225]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-03a5cd5f9ef32d193]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0ddcceecd619d464e]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-070c6d519541181c7]
+aws_efs_mount_target.efs_mount[0]: Refreshing state... [id=fsmt-563fe787]
+aws_efs_mount_target.efs_mount[1]: Refreshing state... [id=fsmt-593fe788]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-07dd5c2843fdff11f]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0a50816a7fcc3cfe1]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-092e7339c40d7f0b71080289494]
+module.vpc.aws_nat_gateway.this[1]: Refreshing state... [id=nat-08389d0c137d18704]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-031f2b9906e72cd2d]
+aws_lb.wiki-elb: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-south-1::loadbalancer/app/mediawiki-wiki-lb/ff9b377d7a661760]
+module.rds.module.db_subnet_group.aws_db_subnet_group.this[0]: Refreshing state... [id=wikidatabase-20201002170241377300000003]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0322931d9c15323131080289494]
+module.vpc.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-03edb24f98e8b3f271080289494]
+module.rds.module.db_instance.aws_db_instance.this[0]: Refreshing state... [id=wikidatabase]
+aws_ssm_parameter.lbDNS: Refreshing state... [id=/mediawiki/elb/dns]
+aws_lb_listener.wiki-lsnr: Refreshing state... [id=arn:aws:elasticloadbalancing:ap-south-1::listener/app/mediawiki-wiki-lb/ff9b377d7a661760/c11f1d469da62735]
+aws_ssm_parameter.dbHost: Refreshing state... [id=/mediawiki/db/host]
+null_resource.stackAction: Destroying... [id=4587657500506520319]
+null_resource.stackAction: Destruction complete after 0s
+null_resource.stackAction: Creating...
+null_resource.stackAction: Provisioning with 'local-exec'...
+null_resource.stackAction (local-exec): Executing: ["/bin/bash" "-c" "../scripts/create_update_stack.sh 1.35 1.35.0 wikistack"]
+null_resource.stackAction (local-exec): Getting stack params
+null_resource.stackAction: Still creating... [10s elapsed]
+null_resource.stackAction (local-exec): Updating Stack
+null_resource.stackAction (local-exec): {
+null_resource.stackAction (local-exec):     "StackId": "arn:aws:cloudformation:ap-south-1::stack/wikistack/b8a593d0-0500-11eb-ba04-020209f6e580"
+null_resource.stackAction (local-exec): }
+null_resource.stackAction: Creation complete after 12s [id=857227173389313173]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+
+Outputs:
+
+instance_role = ec2_profile
+private_key_pem = -
+private_key_pem_id = mediawiki
+sg_id = sg-0f2fb03820a405cf4
+subnet_id = subnet-0241ed4c771648ef7\,subnet-08f66a4ab41e0f49f
+target_group_arn = arn:aws:elasticloadbalancing:ap-south-1::targetgroup/mediawiki-app-tg/f97e94748f39da07

@@ -1,0 +1,6 @@
+---
+root_password: "root123"
+dbName: "wikidatabase"
+dbUser: "wiki"
+dbPass: "wiki123"
+install_local_db: false
